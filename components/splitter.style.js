@@ -11,7 +11,7 @@ export const SectionSplitter = styled.section`
  height: auto;
     `}
   ${mq.phone`
- height:100vh;
+ height:auto;
     `}
 `;
 
