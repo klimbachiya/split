@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.section-splitter {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 150rem;
+  width: 100%;
+  background-color: rgb(197, 228, 231);
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-cols {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.form-control {
+  width: 100%;
+  color: rgb(0, 73, 77);
+}
+
+.form-control input {
+  padding: 1.2rem;
+  border: none;
+  background-color: rgb(244, 250, 250);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  font-weight: 700;
+}
+
+*:focus {
+  outline: none;
+  /* box-shadow: 0 0 0 0.3rem rgba(0, 73, 77, 0.5); dark shade */
+  /* box-shadow: 0 0 0 0.3rem rgba(127, 156, 159, 0.5); */
+  box-shadow: 0 0 0 0.3rem rgba(31, 197, 182, 0.5);
+  /* color:0 0 0 0.3rem rgba(226, 121, 79, 0.5) */
+}
+
+label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: rgb(92 111 111);
+}
+
+.tip-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.2rem;
+  gap: 8rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo-box {
+  width: 9.6rem;
+  height: 5.6rem;
+  position: relative;
+}
+
+.tip-content {
+  padding: 2.4rem;
+  background-color: white;
+  border-radius: 18px;
+}
+
+.select-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.4rem;
+  gap: 4.8rem;
+}
+
+.select-tip {
+  width: 100%;
+}
+
+.select-tip label {
+  margin-bottom: 2.4rem;
+}
+
+.tip-percent {
+  background-color: rgba(0, 73, 77);
+  color: rgb(244, 250, 250);
+  padding: 1.2rem 2.4rem;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .tip-percent-custom {
+  background-color: rgb(244, 250, 250);
+  color: rgb(92 111 111);
+  font-weight: 500;
+  cursor: pointer;
+} */
+
+.tip-custom-textbox {
+  width: 12rem;
+}
+
+.tip-custom-textbox input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.check-amount {
+  background-color: rgba(0, 73, 77);
+  border-radius: 9px;
+  color: rgb(62 150 147);
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-icon {
+  background-repeat: no-repeat;
+  background-position: 20px;
+  text-align: right;
+}
+
+.bill-textbox {
+  background-image: url('/icon-dollar.svg');
+}
+
+.person-textbox {
+  background-image: url('/icon-person.svg');
+}
+
+.amount-box {
+  display: flex;
+  gap: 9.6rem;
+  margin-bottom: 6.4rem;
+  justify-content: space-between;
+}
+
+.amount-label {
+  font-size: 1.6rem;
+  color: rgb(244, 250, 250);
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.amount-per-person {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(31 197 182);
+}
+
+.amount {
+  font-weight: 500;
+  font-size: 4.4rem;
+  color: rgb(31 197 182);
+}
+
+.reset-btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.btn {
+  padding: 1.2rem 2.4rem;
+  width: 100%;
+  border: none;
+  background-color: rgb(31 197 182);
+  border-radius: 5px;
+  color: rgba(0, 73, 77);
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.btn:hover,
+.tip-percent:hover {
+  background-color: rgb(145 236 228);
+  color: rgba(0, 73, 77);
+}
+
+/* 96 * 16 =  1504px*/
+@media (max-width: 94em) {
+  .container {
+    height: 100%;
+  }
+}
+/* 960px */
+@media (max-width: 60em) {
+  html {
+    font-size: 56.25%;
+  }
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-splitter {
+    height: auto;
+  }
+}
+
+/* 560px */
+@media (max-width: 35em) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-splitter {
+    height: 100vh;
+  }
+
+  .grid-3-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tip-box {
+    padding: 4.2rem 0;
+  }
+
+  .tip-content {
+    padding: 3.6rem;
+  }
+
+  .tip-custom-textbox {
+    width: 15rem;
+  }
+
+  .check-amount {
+    padding: 2.4rem;
+  }
+}
